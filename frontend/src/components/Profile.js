@@ -25,7 +25,8 @@ const EditProfileSettings = (props) => {
 };
 
 const FollowUserButton = (props) => {
-  if (props.isUser) {
+  
+  if (!props.isUser) {
     return null;
   }
 
@@ -35,7 +36,6 @@ const FollowUserButton = (props) => {
   } else {
     classes += " btn-outline-secondary";
   }
-
   const handleClick = (ev) => {
     ev.preventDefault();
     if (props.user.following) {
